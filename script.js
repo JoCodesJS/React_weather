@@ -31,7 +31,7 @@ if (hour < 10) {
   hour = `0${hour}`;
 }
 
-//p.innerHTML = `${day}, ${month} ${date} ${hour}:${minutes}`;
+p.innerHTML = `${day}, ${month} ${date} | ${hour}:${minutes}`;
 
 function search(event) {
   event.preventDefault();
@@ -76,7 +76,15 @@ function showTemperature(response) {
 function formatDay(timestamp) {
   let date = new Date(timestamp * 1000);
   let day = date.getDay();
-  let days = ["Sun", "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat"];
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
 
   return days[day];
 }
